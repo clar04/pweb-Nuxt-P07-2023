@@ -22,15 +22,11 @@ export const Blogs: CollectionConfig = {
           name: 'title',
           type: 'text',
           required: true,
-          minLength: 20,
-          maxLength: 100,
         },
         {
           name: 'description',
           type: 'textarea',
           required: true,
-          minLength: 40,
-          maxLength: 160,
         },
         {
           name: 'Tags',
@@ -38,7 +34,13 @@ export const Blogs: CollectionConfig = {
           type: 'relationship',
           relationTo: 'tags',
           required: true,
-      },
+        },
+        {
+          name: 'Category',
+          label: 'Category',
+          type: 'relationship',
+          relationTo: 'Categories',
+        },
       ],
     },
     {
