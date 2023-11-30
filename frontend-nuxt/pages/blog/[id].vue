@@ -1,0 +1,3 @@
+<template>
+    <Getdetails></Getdetails>
+</template>
