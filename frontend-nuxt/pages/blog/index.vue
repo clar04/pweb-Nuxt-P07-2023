@@ -16,3 +16,9 @@ const { data: posts } = await useAsyncData(
 )
 const rawPosts = posts._rawValue.docs;
 </script>
+
+<style>
+.card {
+  margin-top: 50px;
+}
+</style>
