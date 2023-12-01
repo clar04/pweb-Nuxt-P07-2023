@@ -51,7 +51,12 @@ export const Blogs: CollectionConfig = {
           name: 'ImageURL',
           label: 'ImageURL',
           type: 'text',
-        }
+        },
+        {
+          name: "ImageURL2",
+          label: "ImageAu",
+          type: "text",
+        },
       ],
     },
   ],
