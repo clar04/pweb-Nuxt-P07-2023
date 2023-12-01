@@ -31,7 +31,7 @@
                         </div>
                         <div class="col mb-5 mb-5 mb-xl-0">
                             <div class="text-center">
-                                <img class="img-fluid rounded-circle mb-4 px-4" src="https://media.licdn.com/dms/image/D5603AQHIv4cjUyJO8Q/profile-displayphoto-shrink_100_100/0/1701452537252?e=1706745600&v=beta&t=2ic8ULELHlmnzS6TEePMyWJUo7dIHZ8xxwrAvymJLh8" alt="..." />
+                                <img class="img-fluid rounded-circle mb-4 px-4" src="https://media.licdn.com/dms/image/D5603AQHIv4cjUyJO8Q/profile-displayphoto-shrink_400_400/0/1701452537252?e=1706745600&v=beta&t=CNFGXAnZ-x9GArJabom9BRpA5oT_tvNxapNQyjlOJLQ" alt="..." />
                                 <h5 class="fw-bolder">Clara Valentina</h5>
                                 <div class="fst-italic text-muted">5027221016</div>
                             </div>
