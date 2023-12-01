@@ -26,8 +26,7 @@
                   <div class="d-flex align-items-center">
                     <img
                       class="rounded-circle me-3"
-                      src="https://dummyimage.com/40x40/ced4da/6c757d"
-                      alt="Author Image"
+                      :src="post.postMeta.ImageURL2"
                     />
                     <div class="small">
                       <div class="fw-bold">{{ post.postMeta.Author }}</div>
