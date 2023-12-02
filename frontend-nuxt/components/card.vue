@@ -9,6 +9,7 @@
                 class="card-img-top"
                 :src="post.postMeta.ImageURL"
                 :alt="post.postMeta.title"
+                style="height: 100%; object-fit: contain;"
               />
               <div class="card-body p-4">
                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">

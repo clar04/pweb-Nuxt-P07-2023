@@ -32,7 +32,7 @@ const limitedPosts = rawPosts.slice(0, 3).map(post => ({
   ...post,
   postMeta: {
     ...post.postMeta,
-    description: truncateDescription(post.postMeta.description, 80)
+    description: truncateDescription(post.postMeta.description, 150)
   }
 }));
 </script>

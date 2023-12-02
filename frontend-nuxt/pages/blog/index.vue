@@ -1,5 +1,5 @@
 <template>
-    <Card :posts="rawPosts"></Card>
+    <Card :posts="limitedPosts"></Card>
 </template>
 
 <script setup>
@@ -14,7 +14,22 @@ const { data: posts } = await useAsyncData(
     watch: [page]
   }
 )
+
+const truncateDescription = (description, maxLength) => {
+  if (description.length > maxLength) {
+    return description.slice(0, maxLength) + '...';
+  }
+  return description;
+};
+
 const rawPosts = posts._rawValue.docs;
+const limitedPosts = rawPosts.map(post => ({
+  ...post,
+  postMeta: {
+    ...post.postMeta,
+    description: truncateDescription(post.postMeta.description, 150),
+  },
+}));
 </script>
 
 <style>
