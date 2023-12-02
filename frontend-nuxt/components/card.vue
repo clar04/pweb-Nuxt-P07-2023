@@ -27,6 +27,9 @@
                     <img
                       class="rounded-circle me-3"
                       :src="post.postMeta.ImageURL2"
+                      alt="Author Image"
+                      width="50"
+                      height="50"
                     />
                     <div class="small">
                       <div class="fw-bold">{{ post.postMeta.Author }}</div>
