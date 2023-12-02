@@ -8,9 +8,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link"><router-link to="/">Home</router-link></a></li>
-                    <li class="nav-item"><a class="nav-link"><router-link to="/blog">Blogs</router-link></a></li>
-                    <li class="nav-item"><a class="nav-link"><router-link to="/about">About</router-link></a></li>
+                    <li class="nav-item"><a class="nav-link"><NuxtLink to="/">Home</NuxtLink></a></li>
+                    <li class="nav-item"><a class="nav-link"><NuxtLink to="/blog">Blogs</NuxtLink></a></li>
+                    <li class="nav-item"><a class="nav-link"><NuxtLink to="/about">About</NuxtLink></a></li>
                 </ul>
             </div>
         </div>

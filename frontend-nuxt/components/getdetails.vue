@@ -27,21 +27,34 @@
                   {{ post.postMeta.description }}
                 </p>
             </section>
+            <footer>
+              <div>
+                <button @click="counter++"><p>Like: {{ counter }}</p></button>
+              </div>
+            </footer>
           </article>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <style>
 @import'~/assets/index.scss';
+
+button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
 </style>
 
 <script setup>
-
-const { post } = defineProps([
-  'post'
-]);
+const route = useRoute().params.id
+const page = ref(1)
+const { data: post } = await useAsyncData('post', () => $fetch(`http://localhost:5000/api/Blogs/${route}`));
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -49,5 +62,14 @@ const formatDate = (dateString) => {
   return date.toLocaleDateString('en-US', options);
 };
 
+console.log(post)
+console.log(route)
+
+import { onBeforeMount } from 'vue';
+const counter = useState('counter', () => Math.round(Math.random() * 1000));
+onBeforeMount(() => {
+  // Generate a new random number every time the component is mounted
+  counter.value = Math.round(Math.random() * 1000);
+});
 </script>
 

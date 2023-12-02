@@ -14,9 +14,9 @@
                 <div class="badge bg-primary bg-gradient rounded-pill mb-2">
                   {{ post.postMeta.Tags.Tags }}
                 </div>
-                <router-link :to="`/blog/${post.id}`" class="text-decoration-none link-dark stretched-link">
+                <NuxtLink :to="`/blog/${post.id}`" class="text-decoration-none link-dark stretched-link">
                   <div class="h5 card-title mb-3">{{ post.postMeta.title }}</div>
-                </router-link>
+                </NuxtLink>
                 <p class="card-text mb-0">
                   {{ post.postMeta.description }}
                 </p>
