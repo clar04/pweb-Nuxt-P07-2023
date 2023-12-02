@@ -38,10 +38,10 @@
 </style>
 
 <script setup>
-const route = useRoute().params.id
-const page = ref(1)
-const { data: post } = await useAsyncData('post', () => $fetch(`http://localhost:5000/api/Blogs/${route}`));
 
+const { post } = defineProps([
+  'post'
+]);
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -49,7 +49,5 @@ const formatDate = (dateString) => {
   return date.toLocaleDateString('en-US', options);
 };
 
-console.log(post)
-console.log(route)
 </script>
 
