@@ -222,18 +222,15 @@ svg{
 </style>
 
 <script setup>
-const route = useRoute().params.id
-const page = ref(1)
-const { data: post } = await useAsyncData('post', () => $fetch(`http://localhost:5000/api/Blogs/${route}`));
-
 const formatDate = (dateString) => {
   const date = new Date(dateString);
   const options = { month: 'long', day: 'numeric', year: 'numeric' };
   return date.toLocaleDateString('en-US', options);
 };
 
-console.log(post)
-console.log(route)
+const { post } = defineProps([
+  'post'
+]);
 
 import { onBeforeMount } from 'vue';
 const counter = useState('counter', () => Math.round(Math.random() * 1000));
@@ -253,5 +250,4 @@ const updateCounter = () => {
     counter.value++;
   }
 };
-
 </script>
